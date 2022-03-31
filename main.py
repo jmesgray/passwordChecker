@@ -14,7 +14,7 @@ def request_api_data(hashed_char):
 def get_password_leaks_count(hashes, hash_to_check):
     hashes = (line.split(':') for line in hashes.text.splitlines())
     for h, count in hashes:
-        if h == hash_to_check:  # "hash to check" is the hashed part (tail) of the password that is not seen
+        if h == hash_to_check:  # "hash to check" is the hashed part (tail) of the password that isn't seen
             return count  # returning the number of times the tail end has been found
     return 0  # if the tail end of the password is not found, then return 0
 
