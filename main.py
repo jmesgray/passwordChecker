@@ -6,8 +6,8 @@ import sys  # required modules
 def request_api_data(hashed_char):
     url = 'https://api.pwnedpasswords.com/range/' + hashed_char  # this line includes the url and hashed password
     response = requests.get(url)  # creating response variable
-    if response.status_code != 200:  # creating a condition that prompts user to use different input if not 200
-        raise RuntimeError(f'Error fetching: {response.status_code}, check the API and try again')
+    if response.status_code != 200: 
+        raise RuntimeError(f'Error fetching: {response.status_code}, check the API and try again') # creating error message
     return response
 
 
@@ -32,9 +32,9 @@ def main(args):
         if count:  # creating condition that informs if password should be changed or not
             print(f'{password} was found {count} times. You should update your password!')
         else:
-            print(f'{password} was NOT found. You are all set!')
-    return 'done!'
+            print(f'{password} was NOT found. You are all set')
+    return 'done'
 
 
 if __name__ == '__main__':  # Only run the file if this is the main file being run
-    sys.exit(main(sys.argv[1:]))  # ensuring that the program exits
+    sys.exit(main(sys.argv[1:]))  # exiting the program
