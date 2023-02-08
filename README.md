@@ -10,7 +10,7 @@ Pwned Passwords API is the source. Typically, a user would visit this website an
 
 ### Instructions
 
-Copy and paste the python script into an IDE or text editor. Input hashed password into the respective area of code and run the program. 
+Copy and paste the python script into an IDE or text editor. Input hashed password into the respective area of code and run the program. (Python 3.9)
 
 ### References: 
 1. https://haveibeenpwned.com/Passwords
